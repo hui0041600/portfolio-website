@@ -1,6 +1,5 @@
 // Get Elements
-const photoUpload = document.getElementById("photo-upload");
-const profilePhoto = document.getElementById("profile-photo");
+/*const profilePhoto = document.getElementById("profile-photo");*/
 
 // Load saved profile picture from localStorage (if exists)
 document.addEventListener("DOMContentLoaded", function () {
@@ -11,19 +10,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-// Event Listener for File Selection
-photoUpload.addEventListener("change", function (event) {
-    const file = event.target.files[0];
-    if (file) {
-        const reader = new FileReader();
-        reader.onload = function (e) {
-            profilePhoto.src = e.target.result; // Set new profile image
-            localStorage.setItem("profilePhoto", e.target.result); // Save to localStorage
-            console.log("Updated Image:", e.target.result); // Debugging
-        };
-        reader.readAsDataURL(file);
-    }
-});
 
 
 document.addEventListener("DOMContentLoaded", function () {

@@ -249,7 +249,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center; /* Center text alignment */
     margin: 50px auto;
     padding: 50px;
     width: 85%; /* Make the section take more space */
@@ -274,6 +273,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
 }
 
 .about-photo {
@@ -282,6 +282,7 @@ body {
     border-radius: 50%; /* Circular frame */
     object-fit: cover;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
 }
 
 /* Profile Photo Fancy Frame with Glow */
@@ -497,15 +498,17 @@ a:hover img {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .navbar {
-        display: none;
+    .about-container {
+        flex-direction: column;
+        text-align: center;
     }
 
-    .header-avatar {
-        margin-left: auto;
+    .about-photo-container {
+        order: -1; /* Move the photo above text on smaller screens */
     }
 
-    section {
-        width: 90%;
+    .about-photo {
+        width: 150px;
+        height: 150px;
     }
 }
