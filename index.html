@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Sticky Header -->
+    <header id="top-header">
+        <div class="brand-name">Hui Zhang</div> <!-- Name on the left -->
+        <div class="header-content">
+            <nav class="navbar">
+                <a href="#about">About me</a>
+                <a href="#projects">GitHub</a>
+                <a href="#resume">Resume</a>
+                <a href="#contact">Contact</a>
+            </nav>
+                <input type="file" id="avatar-input" accept="image/*" style="display: none;">
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- About Section -->
+<section id="about">
+    <div class="about-container">
+        <!-- Profile Picture Upload -->
+        <label for="photo-upload" class="about-photo-container">
+            <img id="profile-photo" src="images/default-avatar.jpg" alt="Your Photo" class="about-photo">
+        </label>
+        <input type="file" id="photo-upload" accept="image/*" style="display: none;">
+            <!-- Text Content -->
+        <div class="about-text">
+            <h1 class="welcome-heading">
+                Welcome to My Page!
+                <span class="smiley-face">
+                    <span class="eye left-eye"></span>
+                    <span class="eye right-eye"></span>
+                    <span class="smile-mouth"></span>
+                </span>
+            </h1>
+            <p>
+                Hi, I’m Hui Zhang, a student in Computer Science at Pace University, currently peursuing mt master degree. I' m passionate about AI, innovation, and technologe, have a certaion foundation of Java development, web technologies, database management, and GPU computing with CUDA. With hands-on experience in parallel computing and data analytics. I like solving complex problems and building efficient, scalable solutions.
+                
+                I am particularly interested in leveraging AI to tackle real-world challenges and continuously explore new technologies to drive innovation. Currently, I am actively seeking internship and  opportunities in software development, AI, and data-driven engineering roles, where I can apply my skills, contribute to impactful projects, and grow as a professional in the tech industry.</p>
+        </section>
+
+        <section id="projects">
+            <h2>Github</h2>
+            <div class="github-container">
+                <!-- GitHub Icon -->
+                <a href="https://github.com/hui0041600" target="_blank">
+                    <img src="images/github-icon.png" alt="GitHub" width="80" height="80" class="github-icon" id="github-icon">
+                </a>
+        
+                <!-- Speech Bubble -->
+                <img src="images/pixel-speech-bubble.png" alt="Click Me!" class="speech-bubble">
+            </div>
+        </section>
+        
+
+        <!-- Resume Section -->
+        <section id="resume">
+            <a href="Hui_Zhang_Resume.pdf" download="Hui_Zhang_Resume.pdf">
+                <a href="your_resume.pdf" download>
+                    <button class="keyboard-button">
+                        <span class="keycap-text">VIEW MY RESUME</span>
+                    </button>
+                </a>
+            </a>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <a href="https://www.linkedin.com/in/hui-z7" target="_blank">
+                <img src="images/linkedin.png" alt="LinkedIn Profile" width="150">
+            </a>
+            
+            <!-- Email Button -->
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=hui0041600@gmail.com">
+             <img src="images/mail.png" alt="Shoot Me" width="150">
+         </a>
+            
+        </section>
+
+        <!-- Hidden Canvas for Avatar Saving -->
+        <canvas id="avatar-canvas" style="display: none;"></canvas>
+    </main>
+</body>
+<script src="script.js"></script>
+</html>

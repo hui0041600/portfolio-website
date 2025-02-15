@@ -1,0 +1,511 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background: linear-gradient(180deg, #f4f4f4 0%, #eaeaea 100%);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+/* General Section Styling */
+section {
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.5);  /* White border, 50% transparency */
+    border-radius: 15px; /* Rounded edges */
+    background: rgba(255, 255, 255, 0.1);  /* Transparent white */
+    backdrop-filter: blur(10px); /* Glass effect */
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2); /* Soft glow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect for Fancy Look */
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.3);
+}
+
+section {
+    border: 2px solid transparent;
+    background: rgba(0, 0, 0, 0.5); /* Darker transparent background */
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 50px auto;
+    width: 80%;
+    position: relative;
+}
+
+/* Gradient border effect */
+section::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, cyan, violet);
+    z-index: -1;
+    border-radius: 15px;
+    opacity: 0.6;
+}
+/* Heading Styling */
+.welcome-heading {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Space between text and smiley */
+}
+
+#top-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-image: url("images/giphy1.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1000;
+}
+/* Apply to the whole webpage */
+body {
+    background-image: url("images/page.gif");  /* Replace with your GIF */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Keep background fixed while scrolling */
+    background-repeat: no-repeat;
+}
+/* Center Text */
+.welcome-heading {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Space between text and smiley */
+}
+
+/* Smiley Face Container */
+.smiley-face {
+    position: relative;
+    width: 90px;  
+    height: 60px;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Eyes */
+.eye {
+    position: absolute;
+    width: 10px;
+    height: 16px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.left-eye {
+    left: 25px;
+    top: 5px;
+}
+
+.right-eye {
+    right: 25px;
+    top: 5px;
+}
+
+/* Proper Curved Smile */
+.smile-mouth {
+    position: absolute;
+    bottom: -3px;
+    width: 70px;
+    height: 50px;
+    border-bottom: 6px solid black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Smooth Smile Curves */
+.smile-mouth::before,
+.smile-mouth::after {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 8px;
+    border-bottom: 6px solid black;
+    border-radius: 50%;
+}
+
+/* Left Smile Curve */
+.smile-mouth::before {
+    left: -10px;
+    bottom: 12px;
+    transform: rotate(-45deg);
+}
+
+/* Right Smile Curve */
+.smile-mouth::after {
+    right: -10px;
+    bottom: 12px;
+    transform: rotate(45deg);
+}
+
+/* Sticky Header */
+#top-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    overflow: hidden;
+    backdrop-filter: blur(10px); /* Glassmorphic effect */
+    display: flex;
+    align-items: flex-end; /* Moves content lower */
+    justify-content: space-between;
+    z-index: 1000;
+    padding: 0 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes gradientText {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+/* Name on Left */
+.brand-name {
+    font-size: 25px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #ff69b4, #c0c0c0); /* Pink to Silver */
+    background-size: 200% 200%; /* Expands gradient for animation */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientText 3s infinite linear;
+    margin-left: 15px; /* Move name slightly inwards */
+    padding-bottom: 5px; /* Adjusts alignment */
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    gap: 20px;
+    flex: 1; /* Ensures navigation stays balanced */
+    top: 16px; /* Move navigation bar lower */
+    margin-right: 45px; /* Prevents cutting off on the right */
+    padding-bottom: 0px; /* Moves navbar lower */
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.navbar a:hover {
+    color: #ff7eb3; /* Highlight color */
+    transform: scale(1.1); /* Subtle zoom on hover */
+}
+
+/* Avatar Styling */
+.header-avatar {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header-avatar:hover {
+    transform: scale(1.2); /* Slight zoom */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+}
+
+#profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* About Me Section */
+#about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Center text alignment */
+    margin: 50px auto;
+    padding: 50px;
+    width: 85%; /* Make the section take more space */
+    max-width: 1000px; /* Limit the width to keep it balanced */
+    background: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Container for image + text */
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 50px; /* Increase space between image and text */
+    width: 100%;
+}
+
+/* Profile Photo */
+.about-photo-container {
+    flex: 1; /* Allows photo section to take a balanced space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-photo {
+    width: 200px; /* Slightly larger for better balance */
+    height: 200px;
+    border-radius: 50%; /* Circular frame */
+    object-fit: cover;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Profile Photo Fancy Frame with Glow */
+.about-photo-container {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Glowing Circular Frame */
+.about-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6), 
+                0 0 30px rgba(255, 255, 255, 0.4), 
+                0 0 45px rgba(255, 255, 255, 0.2); /* Glowing white effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect: Increase Size and Glow */
+.about-photo:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.8), 
+                0 0 50px rgba(255, 255, 255, 0.6), 
+                0 0 75px rgba(255, 255, 255, 0.4); /* More intense glow */
+}
+
+/* About Me Text */
+.about-text {
+    flex: 2; /* Text takes more space than the photo */
+    text-align: center;
+}
+
+.about-text h2 {
+    font-size: 32px; /* Larger header */
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    font-size: 18px; /* Slightly larger text */
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-photo-container {
+        order: -1; /* Move the photo above text on smaller screens */
+    }
+
+    .about-photo {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* GitHub Icon Styling */
+a img {
+    width: 120px; /* Adjust size */
+    height: 120px; /* Adjust size */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+a img:hover {
+    transform: scale(1.2); /* Slightly enlarge on hover */
+    opacity: 0.8;
+}
+
+.github-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Keep icon centered */
+    gap: 15px; /* Space between icon & bubble */
+    position: relative;
+}
+
+
+/* Speech Bubble */
+.speech-bubble {
+    position: absolute;
+    top: -20px;  /* Adjust vertical position */
+    left: 650px; /* Position the speech bubble next to the icon */
+    width: 150px; /* Adjust size */
+    height: auto;
+    animation: fadeIn 1.5s ease-in-out infinite alternate; /* Animation effect */
+}
+
+
+
+/* Animation Effect */
+@keyframes fadeIn {
+    0% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+}
+
+
+/* Main Content */
+main {
+    margin-top: 100px; /* Offset for sticky header */
+    padding: 20px;
+    text-align: center;
+}
+
+section {
+    margin: 50px auto;
+    padding: 20px;
+    width: 80%;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-10px); /* Lift on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background: #555;
+    transform: scale(1.05); /* Subtle zoom on hover */
+}
+
+/* 3D Spacebar Style Button */
+#resume a button {
+    background: linear-gradient(180deg, #131921, #c44e85); /* Depth Effect */
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px 40px;
+    border-radius: 8px; /* Less rounded for a spacebar feel */
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 0 #040507, 0 6px 20px rgba(0, 0, 0, 0.3); /* 3D depth */
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    outline: none;
+}
+
+/* Click Animation */
+.resume-button:active {
+    transform: translateY(3px);
+    box-shadow: 0 2px 0 #0E3A75, 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Projects Section */
+.project {
+    background: linear-gradient(135deg, #f7f7f7, #eaeaea);
+    margin: 20px auto;
+    padding: 20px;
+    width: 70%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.project:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Contact Section */
+img {
+    transition: transform 0.3s ease-in-out;
+}
+
+a:hover img {
+    transform: scale(1.1);
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+    }
+
+    .header-avatar {
+        margin-left: auto;
+    }
+
+    section {
+        width: 90%;
+    }
+}
